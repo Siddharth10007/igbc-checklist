@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IGBC Checklist Evaluator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🏗️ IGBC Checklist Evaluator</h1>
+
+    <form id="projectForm">
+      <label>Building Name:</label><br>
+      <input type="text" id="name" placeholder="Enter building name" required><br><br>
+
+      <label>Building Type:</label><br>
+      <input type="text" id="type" placeholder="e.g., Residential, Commercial" required><br><br>
+
+      <label>Built-up Area (sq.m):</label><br>
+      <input type="number" id="area" required><br><br>
+
+      <h3>IGBC Checklist</h3>
+      <div id="checklist"></div>
+
+      <button type="submit">Start Evaluation</button>
+    </form>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
