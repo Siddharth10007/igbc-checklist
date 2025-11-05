@@ -1,0 +1,19 @@
+High-Impact (7 Points Each): These are major items that require significant investment and have a huge environmental benefit (e.g., On-site renewable energy, Energy-efficient HVAC, Wastewater treatment, Diverting construction waste).
+
+Medium-Impact (6 Points Each): These are also critical items, often mandatory for higher ratings (e.g., Rainwater harvesting, Maximized daylighting).
+
+Standard (3 Points Each): These are all the other 20 items, which represent foundational green building practices.
+
+(4 items * 7 pts) + (2 items * 6 pts) + (20 items * 3 pts) = 100 Total Points.
+
+The server will now add up the points for every box you check. The rating will be based on this aggregate score:
+
+Platinum: 75-100 points
+
+Gold: 60-74 points
+
+Silver: 50-59 points
+
+Certified: 40-49 points
+
+Not Certified: < 40 points

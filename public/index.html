@@ -8,25 +8,84 @@
 </head>
 <body>
   <div class="container">
-    <h1>🏗️ IGBC Checklist Evaluator</h1>
+    <h1>🏗️ Design Smarter. Build Greener</h1>
+    <h2><center>Estimate your IGBC rating instantly and discover how your building can achieve sustainable excellence.
+</center></h2>
 
     <form id="projectForm">
+      <!-- Project details are still needed -->
       <label>Building Name:</label><br>
       <input type="text" id="name" placeholder="Enter building name" required><br><br>
 
       <label>Building Type:</label><br>
-      <input type="text" id="type" placeholder="e.g., Residential, Commercial" required><br><br>
+      <input type="text" id="type" placeholder="e.g., Residential, Commercial, Industrial" required><br><br>
 
       <label>Built-up Area (sq.m):</label><br>
-      <input type="number" id="area" required><br><br>
+      <input type="number" id="area" placeholder="e.g., 1500" required><br><br>
 
-      <h3>IGBC Checklist</h3>
-      <div id="checklist"></div>
-
+      <h3>Select Criteria from the House</h3>
+      
+      <!-- House Image & Hotspots -->
+      <div class="house-container">
+        <!-- 
+          *** IMPORTANT ***
+          Image src is set to "background.jpg" as requested.
+        -->
+        <img src="background.png" alt="House Diagram" class="house-image" 
+             onerror="this.src='https://placehold.co/800x600/eeeeee/999999?text=House+Image+Placeholder';">
+        
+        <!-- 
+          All 6 hotspots with UPDATED positions.
+        -->
+        
+        <!-- 🌳 Site: Placed on the lawn/landscaping area -->
+        <div class="hotspot" id="hotspot-site" data-criterion="site" style="top: 85%; left: 75%;">
+          🌳
+        </div>
+        
+        <!-- 💧 Water: Placed directly on the water cistern/tank -->
+        <div class="hotspot" id="hotspot-water" data-criterion="water" style="top: 67%; left: 22%;">
+          💧
+        </div>
+        
+        <!-- ⚡️ Energy: Placed on the planter box -->
+        <div class="hotspot" id="hotspot-energy" data-criterion="energy" style="top: 69%; left: 43%;">
+          ⚡️
+        </div>
+        
+        <!-- 🧱 Materials: Placed on the roof -->
+        <div class="hotspot" id="hotspot-materials" data-criterion="materials" style="top: 34%; left: 40%;">
+          🧱
+        </div>
+        
+        <!-- 🌬️ Indoor: Placed on the large window (for daylight/views) -->
+        <div class="hotspot" id="hotspot-indoor" data-criterion="indoor" style="top: 62%; left: 80%;">
+          🌬️
+        </div>
+        
+         <!-- 💡 Innovation: Placed on the front door -->
+         <div class="hotspot" id="hotspot-innovation" data-criterion="innovation" style="top: 65%; left: 56%;">
+          💡
+        </div>
+      </div>
+      
       <button type="submit">Start Evaluation</button>
     </form>
 
     <div id="result"></div>
+  </div>
+
+  <!-- Modal Window Structure (Hidden) -->
+  <div id="criteriaModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modalTitle">Criteria Title</h2>
+      <!-- This description p tag is targeted by script.js -->
+      <p id="modalInfo" class="criteria-description">Information about the criteria.</p>
+      <div id="modalChecklist">
+        <!-- Checklist items will be injected here by JavaScript -->
+      </div>
+    </div>
   </div>
 
   <script src="script.js"></script>
