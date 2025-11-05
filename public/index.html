@@ -4,11 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>IGBC Checklist Evaluator</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- --- NEW TOPBAR --- -->
+  <nav class="topbar">
+    <ul>
+      <li><a href="#section-rating">Rating</a></li>
+      <li><a href="#section-site">Site</a></li>
+      <li><a href="#section-water">Water</a></li>
+      <li><a href="#section-energy">Energy</a></li>
+      <li><a href="#section-materials">Materials</a></li>
+      <li><a href="#section-indoor">Indoor</a></li>
+      <li><a href="#section-innovation">Innovation</a></li>
+    </ul>
+  </nav>
+
   <div class="container">
-    <h1>🏗️ Design Smarter. Build Greener</h1>
+    <!-- UPDATED: Replaced emoji with an <img> tag for the logo -->
+    <h1>
+      <img src="logos.png" alt="Logo" class="header-logo" onerror="this.src='https://placehold.co/50x50/2e7d32/ffffff?text=Logo&fontsize=12';">
+      Design Smarter. Build Greener
+    </h1>
     <h2><center>Estimate your IGBC rating instantly and discover how your building can achieve sustainable excellence.
 </center></h2>
 
@@ -74,6 +93,109 @@
 
     <div id="result"></div>
   </div>
+
+<!-- --- NEW CONTENT AREA --- -->
+    <!-- Added ID tags to each section for the topbar links -->
+    <div class="info-container">
+      
+      <!-- Section 1: Rating Levels -->
+      <div class="info-section" id="section-rating">
+        <h2>About The Rating</h2>
+        
+        <h3>The Rating Levels</h3>
+        <p>Your total score determines your estimated rating:</p>
+        <ul class="rating-list">
+          <li><strong>Platinum (75 - 100 Points):</strong> Global Leadership</li>
+          <li><strong>Gold (60 - 74 Points):</strong> National Excellence</li>
+          <li><strong>Silver (50 - 59 Points):</strong> Outstanding Performance</li>
+          <li><strong>Certified (40 - 49 Points):</strong> Best Practices</li>
+          <li><strong>Not Certified (0 - 39 Points):</strong> Does not meet minimum requirements.</li>
+        </ul>
+
+        <h3>Disclaimer</h3>
+        <p>This is an educational estimator tool. The final score is based on this application's point system. Official IGBC certification requires a formal audit.</p>
+      </div>
+
+      <!-- Section 2: Site Selection -->
+      <div class="info-section" id="section-site">
+        <h2>🌳 1. Site Selection and Planning</h2>
+        <p><strong>About this Criteria</strong><br>
+        This credit category focuses on making sustainable choices <em>before</em> construction begins. The goal is to select a site and plan its development to minimize the environmental impact on the land, water, and local habitat. It encourages building in areas that are already developed to prevent urban sprawl and protect sensitive land.</p>
+        
+        <p><strong>Key Requirements & Benefits</strong><br>
+        Requirements include avoiding prime agricultural land or ecologically sensitive areas, implementing strict soil erosion control during construction, and preserving a significant portion of the existing natural habitat. Additional points are given for selecting sites near public transportation and basic amenities (like banks, schools, or markets), which reduces the need for private vehicles. The primary benefit is a massive reduction in the project's environmental footprint, preservation of local biodiversity, and lower infrastructure strain. It also promotes healthier lifestyles for occupants by encouraging walking and cycling.</p>
+        
+        <p><strong>Indian Context & Stats</strong><br>
+        In rapidly urbanizing Indian cities, construction is a major source of pollution. Construction activities account for a significant portion of urban noise pollution and air pollution from dust. By enforcing strict site management and soil erosion control, projects can directly reduce their impact on the surrounding community. Furthermore, selecting sites near public transport is critical for cities like Mumbai, Delhi, and Bengaluru to reduce traffic congestion and associated emissions.</p>
+      </div>
+
+      <!-- Section 3: Water Conservation -->
+      <div class="info-section" id="section-water">
+        <h2>💧 2. Water Conservation</h2>
+        <p><strong>About this Criteria</strong><br>
+        This category is designed to dramatically reduce a building's consumption of fresh, potable water. It promotes a multi-step approach: first, reduce the total water needed; second, reuse and recycle water on-site; and third, harvest rainwater.</p>
+        
+        <p><strong>Key Requirements & Benefits</strong><br>
+        Key requirements include installing high-efficiency, low-flow plumbing fixtures (taps, showers, toilets) and water-efficient landscaping (using native, drought-tolerant plants and drip irrigation). Higher-level credits are awarded for advanced systems like on-site Sewage Treatment Plants (STPs) to treat wastewater (grey and black water) for reuse in flushing and irrigation, as well as installing rainwater harvesting systems to capture and store roof runoff. The benefits are twofold: significant long-term savings on water bills and a reduced strain on municipal water supplies and groundwater resources.</p>
+        
+        <p><strong>Indian Context & Stats</strong><br>
+        This is arguably one of the most critical categories for India. According to a NITI Aayog report, 21 major Indian cities, including Bengaluru, Delhi, and Chennai, are facing critical groundwater depletion. IGBC-certified green buildings have been shown to reduce water consumption by 30-50%. Implementing these measures is no longer just "good to have"; it is becoming a crucial strategy for water security in urban India.</p>
+      </div>
+
+      <!-- Section 4: Energy Efficiency -->
+      <div class="info-section" id="section-energy">
+        <h2>⚡️ 3. Energy Efficiency</h2>
+        <p><strong>About this Criteria</strong><br>
+        This category aims to reduce the building's energy demand through intelligent design and efficient technology. It follows a "passive-first" approach: design the building smartly to reduce the need for energy (e.g., for lighting and cooling), and then meet the remaining demand with efficient systems and renewable energy.</p>
+        
+        <p><strong>Key Requirements & Benefits</strong><br>
+        Requirements start with a high-performance building envelope—this includes insulated walls, a reflective or green roof, and double-glazed windows to cut down on heat gain. This is paired with 100% LED lighting, energy-efficient appliances, and high-efficiency HVAC systems. Top-level credits are given for installing on-site renewable energy, such as solar photovoltaic (PV) panels, to meet a portion of the building's energy needs. The primary benefit is a massive reduction in operational costs via lower electricity bills, which can be 20-40% less than in conventional buildings.</p>
+        
+        <p><strong>Indian Context & Stats</strong><br>
+        The building sector is a major consumer of electricity in India, responsible for over 30% of the total energy use. As the country's economy grows, this new demand is set to explode. The Bureau of Energy Efficiency (BEE) estimates that efficient buildings can save up to 40% of energy compared to traditional structures. Promoting energy efficiency is a key national strategy for achieving energy security and meeting India's climate goals.</p>
+      </div>
+
+      <!-- Section 5: Materials & Resources -->
+      <div class="info-section" id="section-materials">
+        <h2>🧱 4. Materials & Resources</h2>
+        <p><strong>About this Criteria</strong><br>
+        This category promotes the use of building materials that are sustainable throughout their life cycle. It focuses on reducing the environmental impact of material extraction, processing, transportation, and disposal.</p>
+        
+        <p><strong>Key Requirements & Benefits</strong><br>
+        The requirements encourage using materials with high recycled content (like fly ash bricks or recycled steel), rapidly renewable materials (like bamboo), and materials that are sourced locally (within 400-800km) to reduce transportation emissions. A major component is waste management, which includes diverting at least 75% of construction waste away from landfills and providing segregated waste bins (for wet, dry, and e-waste) for occupants. The benefits include a lower embodied carbon footprint for the building, reduced air and water pollution from material manufacturing, and a significant reduction in waste sent to India's overburdened landfills.</p>
+        
+        <p><strong>Indian Context & Stats</strong><br>
+        India generates an estimated 150 million tonnes of Construction and Demolition (C&D) waste annually, but has the official capacity to recycle only about 1% of it. This waste chokes landfills and pollutes public spaces. By prioritizing waste diversion and using recycled materials, green buildings create a market for recycled products and directly tackle this massive national challenge.</p>
+      </div>
+
+      <!-- Section 6: Indoor Environmental Quality -->
+      <div class="info-section" id="section-indoor">
+        <h2>🌬️ 5. Indoor Environmental Quality (IEQ)</h2>
+        <p><strong>About this Criteria</strong><br>
+        This category focuses on the health, comfort, and well-being of the building's occupants. The goal is to create indoor spaces that are healthy, comfortable, and productive to live and work in.</p>
+        
+        <p><strong>Key Requirements & Benefits</strong><br>
+        Key requirements include maximizing natural daylight and ensuring a visual connection to the outdoors for most occupants. It also mandates the use of low-VOC (Volatile Organic Compound) paints, adhesives, and furnishings, which release fewer harmful chemicals into the air. Proper ventilation, occupant-controlled lighting, and acoustic comfort are also critical. The benefits are directly linked to human health: improved respiratory health, reduced allergies and headaches, lower stress, and proven increases in productivity and cognitive function.</p>
+        
+        <p><strong>Indian Context & Stats</strong><br>
+        With outdoor air pollution being a major concern in many Indian cities, it's crucial to ensure indoor spaces are a "safe haven." Studies have shown that indoor air can often be 2-5 times more polluted than outdoor air. Given that people spend up to 90% of their time indoors, IEQ is a critical public health issue. Epidemiological models have linked long-term exposure to poor air quality (both indoor and outdoor) to a significant percentage of mortality in cities like Delhi.</p>
+      </div>
+
+      <!-- Section 7: Innovation & Design -->
+      <div class="info-section" id="section-innovation">
+        <h2>💡 6. Innovation & Design Process</h2>
+        <p><strong>About this Criteria</strong><br>
+        This is a bonus category that rewards projects for exceeding the requirements of the IGBC rating system or for implementing new, creative green strategies. It. It encourages teams to think outside the box and pioneer new solutions.</p>
+        
+        <p><strong>Key Requirements & Benefits</strong><br>
+        Points are awarded for two main reasons: achieving exemplary performance (e.g., reducing water use by 60% instead of the required 30%) or implementing an innovative strategy not covered by other credits (like a green roof, a carbon-negative material, or an advanced building monitoring system). A key part of this is having an IGBC Accredited Professional (AP) on the project team. An IGBC AP is an expert who can guide the project from the very beginning, ensuring that sustainability goals are integrated into the design process, not just added on as an afterthought.</p>
+        
+        <p><strong>Indian Context & Stats</strong><br>
+        The green building movement in India is one of the fastest-growing in the world, with over 10 billion sq. ft. of green building footprint registered with the IGBC. This rapid growth is fueled by innovation and a desire to find solutions that are uniquely suited to India's climate and economic context. This credit category serves as an incubator, encouraging project teams to push the boundaries and help India become a global leader in sustainable construction.</p>
+      </div>
+
+    </div> <!-- End Info Container -->
+  </div> <!-- End Main Container -->
 
   <!-- Modal Window Structure (Hidden) -->
   <div id="criteriaModal" class="modal">
