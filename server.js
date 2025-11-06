@@ -137,7 +137,17 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
+// Fetch evaluation history
+app.get("/api/history", (req, res) => {
+  db.all("SELECT * FROM evaluations ORDER BY created_at DESC", (err, rows) => {
+    if (err) return res.status(500).json({ error: "Failed to fetch history" });
+    res.json(rows);
+  });
+});
+
+
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
+

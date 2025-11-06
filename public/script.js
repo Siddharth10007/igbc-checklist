@@ -235,3 +235,53 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+  // --- 7. HISTORY & HELP MODALS ---
+
+  const historyBtn = document.getElementById("historyBtn");
+  const helpBtn = document.getElementById("helpBtn");
+  const historyModal = document.getElementById("historyModal");
+  const helpModal = document.getElementById("helpModal");
+  const closeHistory = document.getElementById("closeHistory");
+  const closeHelp = document.getElementById("closeHelp");
+  const historyContent = document.getElementById("historyContent");
+
+  // Fetch and show history from the database
+  historyBtn.addEventListener("click", async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("/api/history");
+      const data = await res.json();
+      if (data.length === 0) {
+        historyContent.innerHTML = "<p>No previous evaluations found.</p>";
+      } else {
+        historyContent.innerHTML = data.map(item => `
+          <div class="history-item">
+            <strong>${item.name}</strong> (${item.type})<br>
+            Area: ${item.area} sq.m<br>
+            Points: ${item.total_points} — Rating: <b>${item.rating}</b><br>
+            <small>${new Date(item.created_at).toLocaleString()}</small>
+          </div>
+        `).join("");
+      }
+    } catch (err) {
+      historyContent.innerHTML = "<p style='color:red;'>Failed to load history.</p>";
+    }
+    historyModal.style.display = "block";
+  });
+
+  // Help modal open
+  helpBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    helpModal.style.display = "block";
+  });
+
+  // Close buttons
+  closeHistory.addEventListener("click", () => historyModal.style.display = "none");
+  closeHelp.addEventListener("click", () => helpModal.style.display = "none");
+
+  // Close modals on outside click
+  window.addEventListener("click", (e) => {
+    if (e.target === historyModal) historyModal.style.display = "none";
+    if (e.target === helpModal) helpModal.style.display = "none";
+  });

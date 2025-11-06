@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- --- NEW TOPBAR --- -->
+    <!-- --- NEW TOPBAR --- -->
   <nav class="topbar">
     <ul>
       <li><a href="#section-rating">Rating</a></li>
@@ -19,8 +19,12 @@
       <li><a href="#section-materials">Materials</a></li>
       <li><a href="#section-indoor">Indoor</a></li>
       <li><a href="#section-innovation">Innovation</a></li>
+      <!-- NEW Buttons -->
+      <li><a href="#" id="historyBtn">History</a></li>
+      <li><a href="#" id="helpBtn">Help</a></li>
     </ul>
   </nav>
+
 
   <div class="container">
     <!-- UPDATED: Replaced emoji with an <img> tag for the logo -->
@@ -209,6 +213,34 @@
       </div>
     </div>
   </div>
+
+    <!-- History Modal -->
+  <div id="historyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeHistory">&times;</span>
+      <h2>Previous Evaluations</h2>
+      <div id="historyContent">
+        <p>Loading history...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Help Modal -->
+  <div id="helpModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeHelp">&times;</span>
+      <h2>How to Use</h2>
+      <ul class="help-list">
+        <li>Enter your project details (Name, Type, Area).</li>
+        <li>Click on each hotspot (🌳 💧 ⚡️ 🧱 🌬️ 💡) to open its checklist.</li>
+        <li>Tick items your building satisfies.</li>
+        <li>Review all six criteria, then click <strong>Start Evaluation</strong>.</li>
+        <li>Your estimated IGBC rating will appear below.</li>
+        <li>You can view all past evaluations in the <strong>History</strong> section.</li>
+      </ul>
+    </div>
+  </div>
+
 
   <script src="script.js"></script>
 
